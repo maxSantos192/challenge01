@@ -1,8 +1,8 @@
 const fs = require("fs");
 
 function normalizeItem(title) {
-  toASCII = (str) => str.normalize("NFD").replace(/\p{Diacritic}/gu, "");
-  return toASCII(title.toLowerCase())
+  return title
+    .toLowerCase()
     .replace(/[^a-z0-9]/g, " ")
     .replace(/1 litro/g, "1l")
     .replace(/litro/g, "l")
